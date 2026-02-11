@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Haha You clicked it.";
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Demo JavaScript in Head</h2>
 
-<p id="demo">Don't click the button below</p>
-<button type="button" onclick="myFunction()">Try it</button>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+
+    <nav class="nav-panel">
+        <a href="index.html" class="nav-btn active">Home</a>
+        <a href="food.html" class="nav-btn">Food</a>
+        <a href="travel.html" class="nav-btn">Travel</a>
+        <a href="nature.html" class="nav-btn">Nature</a>
+        <a href="friends.html" class="nav-btn">Friends</a>
+        <a href="random.html" class="nav-btn">Random</a>
+    </nav>
+
+    <header class="welcome-section">
+        <h1>Welcome to My World</h1>
+        <pre>
+            Welcome to my very first website. 
+            I decided to make this, about trends and friends. 
+            There's also a collection of food, nature and many more, hope you enjoy.
+        </pre>
+    </header>
 
 </body>
 </html>
