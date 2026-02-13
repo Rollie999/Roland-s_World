@@ -269,20 +269,13 @@ const gallery = document.getElementById('image-gallery');
 images.forEach((fileName, index) => {
     const img = document.createElement('img');
     img.src = folder + fileName;
-    img.className = 'glide-img'; 
-    const randomHeight = Math.floor(Math.random() * (450 - 280 + 1)) + 280;
-    img.style.height = randomHeight + 'px';
-    img.style.width = 'auto';
-
-    img.style.animationDelay = `${index * 0.1}s`;
-
-    img.onclick = () => window.open(img.src, '_blank');
     
-    img.onerror = () => {
-        if (!img.src.includes('.JPG')) {
-            img.src = folder + fileName.replace('.jpg', '.JPG');
-        }
-    };
+    img.style.top = Math.random() * 80 + 5 + '%'; 
+    img.style.animationDelay = (index * 3.5) + 's';
 
+    img.onclick = () => {
+        window.open(img.src, '_blank');
+    };
+    
     gallery.appendChild(img);
 });
