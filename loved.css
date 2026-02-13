@@ -29,7 +29,6 @@ pre, p {
   white-space: pre-wrap;
 }
 
-/* Navigation */
 .menu-icon {
   font-size: 30px;
   cursor: pointer;
@@ -42,6 +41,11 @@ pre, p {
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+#menu-toggle {
+  display: none;
 }
 
 .nav-panel {
@@ -56,10 +60,25 @@ pre, p {
   display: flex;
   flex-direction: column;
   padding-top: 80px;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
 }
 
 #menu-toggle:checked ~ .nav-panel {
   left: 0; 
+}
+
+.nav-btn {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #003366;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+  padding-left: 35px;
 }
 
 #image-gallery {
@@ -68,6 +87,7 @@ pre, p {
   justify-content: center;
   align-items: flex-start;
   gap: 30px; 
+  padding: 40px;
 }
 
 .glide-img {
@@ -77,7 +97,9 @@ pre, p {
   animation: glideIn 1.2s ease-out forwards;
   transition: transform 0.3s ease;
   cursor: pointer;
-  max-width: 100%; 
+  max-width: 100%;
+  object-fit: cover;
+}
 
 @keyframes glideIn {
   0% { transform: translateY(80px); opacity: 0; }
